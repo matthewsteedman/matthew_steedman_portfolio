@@ -222,28 +222,36 @@ section .title {
 
 .projects,
 .testimonials {
-  color: white;
+  color: black;
   background: darkslategray;
 }
 
 .projects .project-content .card {
   width: calc(35% - 20px);
 
-  background: crimson;
+  background: black;
   text-shadow: 5px 5px 30x white;
 
   text-align: center;
   border-radius: 6px;
-  padding: 20px 25px;
+  padding: -45px 25px;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+.projects .project-content .card a {
+  color: white;
+}
+.projects .project-content .card img {
+  width: 150px;
+  height: 150px;
 }
 .projects .project-content .card i {
   font-size: 20px;
   color: white;
 }
 .projects .project-content .card .text {
-  font-size: 25px;
+  color: crimson;
+  font-size: 20px;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
@@ -251,12 +259,14 @@ section .title {
   transition: all 0.3s ease;
 }
 .projects .project-content .card:hover .box {
-  transform: scale(1.05);
+  transform: scale(1);
 }
 .projects .project-content .card :hover i {
+  color: #ffffff;
   background: darkslategray;
 }
 .projects .project-content .card :hover {
+  color: white;
   background: darkslategray;
 }
 
@@ -326,11 +336,14 @@ section .title {
 /* testimonials section style */
 
 .testimonials .carousel .card {
-  background: grey;
+  background: black;
   border-radius: 6px;
   padding: 25px 35px;
   text-align: center;
   transition: all 0.3s ease;
+}
+.testimonials .carousel .card a {
+  color: #ffffff;
 }
 .testimonials .carousel .card:hover {
   background-color: crimson;
@@ -342,7 +355,7 @@ section .title {
   justify-content: center;
 }
 .testimonials .carousel .card:hover box {
-  transform: scale(1.05);
+  transform: scale(1);
 }
 .testimonials .carousel .card .text {
   font-size: 25px;
@@ -350,10 +363,10 @@ section .title {
   margin: 10px 0 7px 0;
 }
 .testimonials .carousel .card img {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   object-fit: cover;
-  border-radius: 100%;
+  /* border-radius: 100%; */
   border: 5px solid crimson;
 }
 .testimonials .carousel .card:hover img {
@@ -379,12 +392,13 @@ section .title {
 }
 .owl-dot.active,
 .owl-dot:hover {
+  color: #ffffff;
   background-color: crimson !important;
 }
 
 /* contact section styling */
 .contact .contact-content .column {
-  width: calc(50% - 30%);
+  width: calc(76% - 30%);
 }
 .contact .contact-content .text {
   font-size: 20px;
@@ -423,6 +437,7 @@ section .title {
   height: 45px;
   width: 100%;
   margin-bottom: 15px;
+  margin-right: 10%;
 }
 .contact .right form .textarea {
   height: 80px;
@@ -433,6 +448,9 @@ section .title {
 }
 .contact .right form .email {
   margin-left: 10px;
+}
+.contact .right form .subject {
+  width: 150px;
 }
 
 .contact .right form .field input,
@@ -476,6 +494,7 @@ section .title {
 footer {
   background: darkslategrey;
   padding: 20px 23px;
+  margin-top: 190px;
 }
 footer span a {
   color: crimson;
