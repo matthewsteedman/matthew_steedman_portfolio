@@ -6,7 +6,7 @@ $(document).ready(function () {
     } else {
       $(".navbar").removeClass("sticky");
     }
-    if (this.scroll > 500) {
+    if (this.scroll > 200) {
       $(".scroll-up-btn").addClass("show");
     } else {
       $(".scroll-up-btn").removeClass("show");
