@@ -4,5 +4,6 @@ subject = document.getElementbyId("user_subject");
 message = document.getElementbyId("user_message");
 
 function clear(){
-  name = ''
+  cleared = '';
+  name.value = cleared;
 }
