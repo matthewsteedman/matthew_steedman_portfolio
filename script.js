@@ -9,7 +9,7 @@ $(document).ready(function () {
     if (this.scroll > 200) {
       $(".scroll-up-btn").addClass("show");
     } else {
-      $(".scroll-up-btn").removeClass("show");
+      $(".scroll-up-btn").removeClass("");
     }
   });
 
