@@ -2,18 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=p" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matthew Steedman Portfolio</title>
     <link rel="stylesheet" href="styling.css" />
     <link rel="stylesheet" href="font-awesome.min.css">
-    
-   
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
   </head>
-
   <body>
     <div class="scroll-up-btn">
       <i class="fas fa-angle-up"></i>
@@ -139,12 +133,42 @@
     <section class="projects" id="project">
       <div class="title">MY PROJECTS</div>
 
-      <div class="card">
-        <img src="Screenshot from 2021-01-11 09-47-47.png" alt="Avatar">
-        <div class="container">
-          <h4><b>John Doe</b></h4> 
-          <p>Architect & Engineer</p> 
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Html and Css Music Web App</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">SWegga Website (java,html & css)</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+      </div>
+      
+      <div id="London" class="tabcontent">
+
+        <h3>Fully Functional Music website</h3>
+        <img src="Screenshot from 2021-01-11 09-47-47.png"/> 
+        <div class="music-text">
+        <p>A music based website , created using Html and css 
+          <a href="https://epic-jang-960a57.netlify.app">Click to view</a></p>
         </div>
+      </div>
+      
+      <div id="Paris" class="tabcontent">
+        <h3>SWegga Website</h3>
+        <img src="Swegga.png">
+        <div class="swegga-text">
+        <p> Swegga , is an user freindly and interactive website. 
+          Users are able to select how much items they want 
+          and calculate the total amount . 
+          Java , css and html was used.
+          <a href="https://swegga-matthew-steedman.netlify.app/">Click to view</a></p> 
+        </div>
+      </div>
+      
+      <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <div class="">
+        <a href="https://swegga-matthew-steedman.netlify.app/">Click to view</a></p> 
+      </div>
+    </div>
+    
+        <p>Tokyo is the capital of Japan.</p>
       </div>
       <!-- <div class="max-width">
         <h2 class="title">MY PROJECTS</h2>
