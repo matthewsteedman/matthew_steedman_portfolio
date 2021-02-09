@@ -117,7 +117,7 @@ html {
 }
 
 .home .max-width {
-  margin: auto 0 auto 40px;
+  margin: auto 0 auto 82px;
 }
 
 .home .home-content .text-1 {
@@ -207,7 +207,7 @@ section .title {
   height: 390px;
   width: 452px;
   margin-top: -40%;
-  margin-left: 6%;
+  margin-left: 7%;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -255,6 +255,7 @@ section .title {
   position: relative;
   margin-top: 900%;
   margin-left: -1830%;
+  text-align: center;
 }
 @keyframes anima {
   to {
@@ -271,13 +272,13 @@ section .title {
   font-size: 40px;
   text-align: left;
   font-family: Georgia, "Times New Roman", Times, serif;
-  margin-left: 161px;
+  margin-left: 162px;
 }
 .more-about-me h4 {
   color: crimson;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
-  margin-left: 225px;
+  margin-left: 162px;
 }
 .more-about-me .passion_board {
   font-size: 40px;
@@ -296,7 +297,7 @@ section .title {
   margin-top: 60px;
   padding-bottom: 30px;
   padding-top: 30px;
-  margin-left: 50px;
+  margin-left: 165px;
   padding-left: 50px;
   padding-right: 50px;
   border-radius: 6px;
@@ -306,14 +307,18 @@ section .title {
   text-align: justify;
   font-weight: 300;
 }
+
 .more-about-me .hob .fa {
   font-size: 25px;
   color: crimson;
   display: block;
-  text-align: justify;
+  text-align: left;
 }
 .more-about-me .hob p {
-  margin-left: 10px;
+  text-align: center;
+  margin-top: inherit;
+  font-size: 20px;
+  margin-left: -50px;
 }
 
 /* Projects section css */
@@ -329,8 +334,10 @@ body {
   float: left;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
-  width: 30%;
-  height: 300px;
+  width: 24%;
+  height: -webkit-fill-available;
+  margin-top: -140px;
+  margin-left: 164px;
 }
 
 /* Style the buttons inside the tab */
@@ -362,24 +369,22 @@ body {
 .projects .tabcontent {
   float: left;
   padding: 0px 12px;
-  border: 4px solid white;
-  width: 70%;
+  border: 7px solid crimson;
+  width: 53.7%;
   border-left: none;
-  height: 300px;
+  height: 475px;
+  margin-top: -140px;
 }
 /* styling of P tag  */
 .projects .tabcontent h3 {
   text-align: center;
   color: white;
-  padding-left: 100px;
 }
 
 .projects .tabcontent .music-text {
   flex-wrap: wrap;
-  text-align: right;
+  margin-left: 362px;
   margin-top: -170px;
-  color: white;
-  margin-right: 60px;
 }
 .projects .tabcontent a {
   color: crimson;
@@ -387,14 +392,35 @@ body {
   text-decoration: crimson;
 }
 .projects .tabcontent a:hover {
-  color: darkslategray;
+  color: white;
   transition: 0.3 all ease;
 }
 /* img styling for projects */
 .projects .tabcontent img {
+  border-radius: 2px;
+  border-color: 20px crimson;
   height: 250px;
-  width: 350px;
+  width: 250px;
+  object-fit: contain;
   margin-left: 5px;
+  transition: 0.3s;
+  flex-wrap: wrap;
+}
+.projects .tabcontent img:hover {
+  transform: scale(0.9);
+}
+
+.projects .tabcontent .swegga-text {
+  margin-left: 421px;
+  margin-top: -170px;
+}
+.projects .tabcontent .calculator-text {
+  margin-left: 378px;
+  margin-top: -170px;
+}
+.projects .tabcontent .lotto-text {
+  margin-left: 334px;
+  margin-top: -170px;
 }
 /* skills section style */
 
@@ -470,9 +496,10 @@ body {
 .testimonials .carousel .card {
   background: black;
   border-radius: 6px;
-  padding: 25px 35px;
+  padding: 10px 10px;
   text-align: center;
   transition: all 0.3s ease;
+  margin-right: 180px;
 }
 .testimonials .carousel .card a {
   color: #ffffff;
@@ -505,6 +532,12 @@ body {
   border-color: #ffffff;
   transition: all 0.3s ease;
 }
+no-js .owl-carousel,
+.owl-carousel.owl-loaded {
+  display: block;
+  margin-left: 164px;
+  margin-top: -127px;
+}
 .owl-dots {
   text-align: center;
   margin-top: 20px;
@@ -521,6 +554,11 @@ body {
 .owl-dot.active {
   width: 35px;
   border-radius: 14px;
+}
+.owl-carousel {
+  display: none;
+  width: 88%;
+  z-index: 1;
 }
 .owl-dot.active,
 .owl-dot:hover {
