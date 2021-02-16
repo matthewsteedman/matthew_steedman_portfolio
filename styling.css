@@ -70,6 +70,15 @@ html {
 .navbar.sticky .menu li a:hover {
   color: #ffffff;
 }
+.projects .project-content,
+.skills .skills-content,
+.contact .contact-content,
+.more-about-me,
+.testimonials-continue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 /* menu btn styling */
 
@@ -162,13 +171,53 @@ html {
   margin-left: 100%;
   margin-top: -60%;
 }
-/* about section styling */
 section {
   height: 100vh;
   padding: 200px 0;
 }
-.about .max-width .h2 {
-  height: 500px;
+/* about section styling */
+#about {
+  height: 100vh;
+  padding: 75px 0;
+}
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-areas:
+    "heading heading"
+    "image content"
+    "button button";
+}
+.about h2 {
+  text-align: center;
+  grid-area: heading;
+  font-size: 50px;
+}
+
+.about img {
+  grid-area: image;
+  width: 30vw;
+  object-fit: cover;
+  margin-left: 22%;
+  border-radius: 50px 50px 50px 50px;
+}
+.about .about-content .text {
+  font-size: 30px;
+}
+.about .about-content .text span {
+  color: crimson;
+  font-size: 35px;
+}
+.about-content {
+  grid-area: content;
+  /* padding: 10%; */
+  margin-right: 22%;
+  font-size: 100%;
+}
+
+.about .slide-to {
+  grid-area: button;
 }
 .about,
 .projects,
@@ -178,7 +227,7 @@ section {
 footer {
   font-family: "Poppins", sans-serif;
 }
-section .title {
+.about .title {
   text-align: center;
   font-size: 60px;
   font-weight: 500;
@@ -188,58 +237,12 @@ section .title {
   font-family: "Poppins", sans-serif;
 }
 
-.about .about-content,
-.projects .project-content,
-.skills .skills-content,
-.contact .contact-content,
-.more-about-me {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.slide-to {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
-
-.about .about-content .left {
-  width: 45%;
-  margin-left: -3%;
-  margin-top: 7%;
-}
-.about .about-content .left img {
-  height: 390px;
-  width: 452px;
-  margin-top: -40%;
-  margin-left: 7%;
-  object-fit: cover;
-  border-radius: 6px;
-}
-.about .about-content .right {
-  width: 50%;
-  margin-top: -7%;
-  margin-right: -200px;
-}
-.about .about-content .right .text {
-  font-size: 32px;
-  font-weight: 300;
-  margin-bottom: 20px;
-
-  margin-right: -60px;
-}
-.about .about-content .right .text span {
-  color: crimson;
-}
-.about .about-content .right p {
-  background-color: darkslategray;
-  color: white;
-  border-radius: 6px 6px 6px 6px;
-  text-align: justify;
-  font-size: 16px;
-  font-family: sans-serif;
-  margin-bottom: 100px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-.about .about-content i {
+a .fa-angle-double-down {
   font-size: 48px;
   color: red;
 
@@ -250,11 +253,11 @@ section .title {
   top: -0.5rem;
 }
 
-.about .about-content i {
+a .fa-angle-double-down {
   list-style: none;
   position: relative;
-  margin-top: 900%;
-  margin-left: -1830%;
+  /* margin-top: 900%;
+  margin-left: -1807%; */
   text-align: center;
 }
 @keyframes anima {
@@ -268,160 +271,73 @@ section .title {
 }
 
 /* .more-about-me section */
+
+#more-about-me {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2r 1fr;
+  grid-template-areas:
+    "heading heading"
+    "content content";
+  margin-right: 9%;
+  margin-left: 11%;
+}
 .more-about-me h3 {
-  font-size: 40px;
-  text-align: left;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  margin-left: 162px;
+  text-align: center;
+  font-size: 50px;
 }
 .more-about-me h4 {
-  color: crimson;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
-  margin-left: 162px;
-}
-.more-about-me .passion_board {
-  font-size: 40px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  margin-left: 147px;
-  margin-right: 220px;
-}
-.more-about-me .hobbies {
-  color: crimson;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
-  margin-left: 225px;
-}
-.more-about-me p {
-  font-family: "Times New Roman", Times, serif;
-  margin-top: 60px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  margin-left: 165px;
-  padding-left: 50px;
-  padding-right: 50px;
-  border-radius: 6px;
-  width: 500px;
-  background-color: darkslategray;
-  color: white;
-  text-align: justify;
-  font-weight: 300;
-}
-
-.more-about-me .hob .fa {
+  text-align: center;
   font-size: 25px;
   color: crimson;
-  display: block;
-  text-align: left;
 }
-.more-about-me .hob p {
+.more-about-me .experiences-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.more-about-me .experiences-content p {
+  width: 100%;
+  background-color: crimson;
+  padding: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  color: white;
   text-align: center;
-  margin-top: inherit;
   font-size: 20px;
-  margin-left: -50px;
+  border-radius: 20px 20px 20px 20px;
+}
+.more-about-me .passion-board-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.more-about-me .passion-board-content i {
+  text-align: center;
+  width: 30%;
+  margin: 1%;
+  justify-content: space-between;
+  padding: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: crimson;
+  color: white;
+}
+.more-about-me .passion-board-content i:hover {
+  background-color: darkslategray;
+  color: white;
+  transition: 0.3s linear all;
 }
 
 /* Projects section css */
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: "Lato", sans-serif;
-}
-
-/* Style the tab */
-.projects .tab {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  width: 24%;
-  height: -webkit-fill-available;
-  margin-top: -140px;
-  margin-left: 164px;
+#project {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-areas:
+    "heading heading"
+    "buttons content";
 }
 
-/* Style the buttons inside the tab */
-.projects .tab button {
-  display: block;
-  background-color: crimson;
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.projects .tab button:hover {
-  background-color: white;
-}
-
-/* Create an active/current "tab button" class */
-.projects .tab button.active {
-  background-color: white;
-}
-
-/* Style the tab content */
-.projects .tabcontent {
-  float: left;
-  padding: 0px 12px;
-  border: 7px solid crimson;
-  width: 53.7%;
-  border-left: none;
-  height: 475px;
-  margin-top: -140px;
-}
-/* styling of P tag  */
-.projects .tabcontent h3 {
-  text-align: center;
-  color: white;
-}
-
-.projects .tabcontent .music-text {
-  flex-wrap: wrap;
-  margin-left: 362px;
-  margin-top: -170px;
-}
-.projects .tabcontent a {
-  color: crimson;
-  margin-bottom: 60px;
-  text-decoration: crimson;
-}
-.projects .tabcontent a:hover {
-  color: white;
-  transition: 0.3 all ease;
-}
-/* img styling for projects */
-.projects .tabcontent img {
-  border-radius: 2px;
-  border-color: 20px crimson;
-  height: 250px;
-  width: 250px;
-  object-fit: contain;
-  margin-left: 5px;
-  transition: 0.3s;
-  flex-wrap: wrap;
-}
-.projects .tabcontent img:hover {
-  transform: scale(0.9);
-}
-
-.projects .tabcontent .swegga-text {
-  margin-left: 421px;
-  margin-top: -170px;
-}
-.projects .tabcontent .calculator-text {
-  margin-left: 378px;
-  margin-top: -170px;
-}
-.projects .tabcontent .lotto-text {
-  margin-left: 334px;
-  margin-top: -170px;
-}
 /* skills section style */
 
 .skills .skills-content .column {
@@ -492,80 +408,74 @@ body {
   color: black;
   background: darkslategray;
 }
-
-.testimonials .carousel .card {
-  background: black;
-  border-radius: 6px;
-  padding: 10px 10px;
-  text-align: center;
-  transition: all 0.3s ease;
-  margin-right: 180px;
-}
-.testimonials .carousel .card a {
-  color: #ffffff;
-}
-.testimonials .carousel .card:hover {
-  background-color: crimson;
-}
-.testimonials .carousel .card .box {
+.cards {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 114px;
 }
-.testimonials .carousel .card:hover box {
-  transform: scale(1);
-}
-.testimonials .carousel .card .text {
-  font-size: 25px;
-  font-weight: 500;
-  margin: 10px 0 7px 0;
-}
-.testimonials .carousel .card img {
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-  /* border-radius: 100%; */
-  border: 5px solid crimson;
-}
-.testimonials .carousel .card:hover img {
-  border-color: #ffffff;
-  transition: all 0.3s ease;
-}
-no-js .owl-carousel,
-.owl-carousel.owl-loaded {
-  display: block;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 20%;
   margin-left: 164px;
-  margin-top: -127px;
-}
-.owl-dots {
-  text-align: center;
-  margin-top: 20px;
-}
-.owl-dot {
-  height: 13px;
-  width: 13px;
-  margin: 0 5px;
-  outline: none !important;
-  border-radius: 50%;
-  border: 2px solid crimson !important;
-  transition: all 0.3s ease;
-}
-.owl-dot.active {
-  width: 35px;
-  border-radius: 14px;
-}
-.owl-carousel {
-  display: none;
-  width: 88%;
-  z-index: 1;
-}
-.owl-dot.active,
-.owl-dot:hover {
-  color: #ffffff;
-  background-color: crimson !important;
+  background-color: white;
+  margin-top: -115px;
 }
 
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background-color: darkslategray;
+  color: white;
+}
+
+.container {
+  padding: 2px 16px;
+}
+.container h4 {
+  text-align: center;
+}
+.container h5 {
+  color: crimson;
+  text-align: center;
+  font-weight: bold;
+}
+.container p {
+  text-align: center;
+  font-size: 11px;
+}
+
+/* testimonials-continue styling */
+
+.testimonials-continue {
+  height: 100vh;
+  padding: 200px 0;
+  background-color: darkslategray;
+}
+
+.testimonials-continue .cards i {
+  font-size: 48px;
+  color: red;
+
+  opacity: 0;
+  animation: anima 1s ease infinite;
+  position: absolute;
+  left: -1.5rem;
+  top: -0.5rem;
+}
+
+.testimonials-continue .cards i {
+  list-style: none;
+  position: relative;
+  margin-top: 900%;
+  margin-left: -1807%;
+  text-align: center;
+}
+@keyframes anima {
+  to {
+    opacity: 1;
+    top: 0.1rem;
+  }
+}
 /* contact section styling */
 .contact .contact-content .column {
   width: calc(76% - 30%);
@@ -576,10 +486,10 @@ no-js .owl-carousel,
   margin-bottom: 10px;
 }
 .contact .contact-content .left p {
-  text-align: justify;
+  margin-left: 50px;
 }
 .contact .contact-content .left .icons {
-  margin: 10px 0;
+  margin-left: 164px;
 }
 .contact .contact-content .row {
   display: flex;
