@@ -330,14 +330,71 @@ a .fa-angle-double-down {
 
 /* Projects section css */
 #project {
+  height: 100vh;
+  padding: 75px 0;
+}
+#project {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "heading heading"
-    "buttons content";
+    "heading heading heading"
+    "content content content"
+    "content content content"
+    "content content content"
+    "content content content";
+}
+.projects h1 {
+  grid-area: heading;
+  text-align: center;
+  font-size: 60px;
+}
+.projects .box img {
+  grid-area: content;
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
+.projects .box h3 {
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.projects .box p {
+  text-align: center;
+  margin: 0 auto;
+  color: darkslategray;
+  transition: all 0.5s ease;
+}
+
+.projects .box:hover {
+  background-color: crimson;
+  color: white;
+  transition: all 0.5s ease;
+  border-style: solid;
+  border-color: white;
+  cursor: pointer;
+}
+.projects .box:hover p {
+  color: white;
+}
+.projects .box:hover img {
+  border-style: solid;
+  border-color: white;
+}
+/* .projects .box p:hover {
+  background-color: crimson;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+} */
 /* skills section style */
 
 .skills .skills-content .column {
@@ -591,10 +648,18 @@ footer span a::hover {
     margin-left: 0px;
   }
 }
+
 @media (max-width: 1104px) {
   .about .about-content .left img {
     height: 350px;
     width: 350px;
+  }
+}
+@media (max-width: 1068px) {
+  #projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 @media (max-width: 991px) {
@@ -648,5 +713,48 @@ footer span a::hover {
   .contact .contact-content .column {
     width: 100%;
     margin-bottom: 35px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #project {
+    height: 344vh;
+    margin: 0 auto;
+    padding: 75px 0;
+  }
+  #project {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "heading"
+      "content"
+      "content"
+      "content"
+      "content"
+      "content"
+      "content";
+  }
+  #about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "heading"
+      "image"
+      "content"
+      "button"
+      "button";
+  }
+  #more-about-me {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "heading"
+      "content"
+      "content"
+      "content";
+    margin-right: 9%;
+    margin-left: 11%;
   }
 }
