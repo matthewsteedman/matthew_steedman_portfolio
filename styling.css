@@ -277,16 +277,30 @@ a .fa-angle-double-down {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 2r 1fr;
   grid-template-areas:
-    "heading heading"
-    "content content";
+    "heading1 heading2"
+    "subheading1 subheading2"
+    "content1 content2";
   margin-right: 9%;
   margin-left: 11%;
 }
-.more-about-me h3 {
+.more-about-me .headind1 {
+  grid-area: heading1;
   text-align: center;
   font-size: 50px;
 }
-.more-about-me h4 {
+.more-about-me .heading2 {
+  grid-area: heading2;
+  text-align: center;
+  font-size: 50px;
+}
+.more-about-me .subheading1 {
+  grid-area: subheading1;
+  text-align: center;
+  font-size: 25px;
+  color: crimson;
+}
+.more-about-me .subheading2 {
+  grid-area: subheading2;
   text-align: center;
   font-size: 25px;
   color: crimson;
@@ -313,6 +327,7 @@ a .fa-angle-double-down {
 
 .more-about-me .passion-board-content i {
   text-align: center;
+  font-size: 25px;
   width: 30%;
   margin: 1%;
   justify-content: space-between;
@@ -321,7 +336,9 @@ a .fa-angle-double-down {
   padding-bottom: 3%;
   background-color: crimson;
   color: white;
+  border-radius: 10px 10px 10px 10px;
 }
+
 .more-about-me .passion-board-content i:hover {
   background-color: darkslategray;
   color: white;
@@ -717,6 +734,9 @@ footer span a::hover {
 }
 
 @media screen and (max-width: 900px) {
+  #home {
+    height: 150vh;
+  }
   #project {
     height: 344vh;
     margin: 0 auto;
@@ -735,6 +755,11 @@ footer span a::hover {
       "content";
   }
   #about {
+    height: 130vh;
+    margin: 0 auto;
+    padding: 75px 0;
+  }
+  #about {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -745,15 +770,23 @@ footer span a::hover {
       "button"
       "button";
   }
+
+  #more-about-me {
+    height: 115vh;
+    margin: 0 auto;
+    padding: 75px 0;
+  }
   #more-about-me {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-      "heading"
-      "content"
-      "content"
-      "content";
+      "heading1"
+      "subheading1"
+      "content1"
+      "heading2"
+      "subheading2"
+      "content2";
     margin-right: 9%;
     margin-left: 11%;
   }
