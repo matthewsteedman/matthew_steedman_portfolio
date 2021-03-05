@@ -482,6 +482,12 @@ a .fa-angle-double-down {
   color: black;
   background: darkslategray;
 }
+.testimonials h1 {
+  margin-top: -5%;
+  /* grid-area: heading; */
+  text-align: center;
+  font-size: 60px;
+}
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -493,7 +499,15 @@ a .fa-angle-double-down {
   width: 20%;
   margin-left: 164px;
   background-color: white;
-  margin-top: -115px;
+  margin-top: 50px;
+}
+.card img {
+  object-fit: cover;
+  object-position: top center;
+  max-width: 100%;
+  max-height: 200px;
+  width: auto;
+  height: auto;
 }
 
 .card:hover {
@@ -513,9 +527,9 @@ a .fa-angle-double-down {
   text-align: center;
   font-weight: bold;
 }
-.container p {
+.container .con p {
   text-align: center;
-  font-size: 11px;
+  font-size: 6px;
 }
 
 /* testimonials-continue styling */
@@ -529,7 +543,6 @@ a .fa-angle-double-down {
 .testimonials-continue .cards i {
   font-size: 48px;
   color: red;
-
   opacity: 0;
   animation: anima 1s ease infinite;
   position: absolute;
@@ -555,9 +568,10 @@ a .fa-angle-double-down {
   width: calc(76% - 30%);
 }
 .contact .contact-content .text {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
+  margin-left: 154px;
 }
 .contact .contact-content .left p {
   margin-left: 50px;
@@ -591,11 +605,12 @@ a .fa-angle-double-down {
   height: 45px;
   width: 100%;
   margin-bottom: 15px;
-  margin-right: 10%;
+  margin-right: 25%;
 }
 .contact .right form .textarea {
   height: 80px;
   width: 100%;
+  margin-right: 25%;
 }
 .contact .right form .name {
   margin-right: 10px;
@@ -610,7 +625,7 @@ a .fa-angle-double-down {
 .contact .right form .field input,
 .contact .right form .textarea textarea {
   height: 100%;
-  width: 100%;
+  width: 74%;
   border: 1px solid grey;
   border-radius: 6px;
   outline: none;
