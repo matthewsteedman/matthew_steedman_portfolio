@@ -499,7 +499,11 @@ a .fa-angle-double-down {
   width: 20%;
   margin-left: 164px;
   background-color: white;
+<<<<<<< HEAD
   /* margin-top: 50px; */
+=======
+  margin-top: 50px;
+>>>>>>> 2a5b0985b5142b3fdc3fe15c554529b14bfe8bad
 }
 .card img {
   object-fit: cover;
