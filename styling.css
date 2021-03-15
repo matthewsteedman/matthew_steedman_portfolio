@@ -222,7 +222,6 @@ section {
 .about,
 .projects,
 .skills,
-.testimonials,
 .contact,
 footer {
   font-family: "Poppins", sans-serif;
@@ -808,5 +807,15 @@ footer span a::hover {
       "content2";
     margin-right: 9%;
     margin-left: 11%;
+  }
+  .skills .skills-content .left .text{
+    font-size: 20px;
+    margin-bottom: -1px;
+    margin-top: 6px;
+  }
+  .skills .skills-content .left p{
+    text-align: justify;
+    font-size: 13px;
+    height: 100vh;
   }
 }
