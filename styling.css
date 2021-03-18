@@ -172,7 +172,7 @@ html {
   margin-top: -60%;
 }
 section {
-  height: 135vh;
+  height: 100vh;
   padding: 200px 0;
 }
 /* about section styling */
@@ -283,7 +283,7 @@ a .fa-angle-double-down {
     "content1 content2";
   margin-right: 14%;
   margin-left: 15%;
-  margin-top: -280px;
+  margin-top: -190px;
 }
 .more-about-me .headind1 {
   grid-area: heading1;
