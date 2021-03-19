@@ -225,7 +225,7 @@ section {
 .contact,
 footer,
 .testimonials,
-.testimonials-continue, .more-about-me, .passion-board-content {
+.testimonials-continue, .more-about-me, .passion-board-content i{
   font-family: "Poppins", sans-serif;
 }
 .about .title {
